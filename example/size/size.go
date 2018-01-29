@@ -1,5 +1,6 @@
 package size
 
+// Check size and return string
 func Size(a int) string {
 	switch {
 	case a < 0:

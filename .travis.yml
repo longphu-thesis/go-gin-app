@@ -9,6 +9,19 @@ go:
 
 install: true
 
+services:
+  - redis-server
+  - mysql
+  - mongodb
+
+#addons:
+#  apt:
+#    sources:
+#      - mysql-5.7-trusty
+#    packages:
+#      - mysql-server
+#      - mysql-client
+
 matrix:
   # It's ok if our code fails on unstable development versions of Go.
   allow_failures:
@@ -24,6 +37,12 @@ before_script:
   - go env
   - bash ./bash/go_get_dependency.sh
   - bash ./bash/go_get_dependency_govendor.sh
+  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
+
+#  Mysql 5.7
+#  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('new_password') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+#  - sudo service mysql restart
 
 script:
 #  - bash ./bash/formatted.sh

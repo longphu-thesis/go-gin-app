@@ -1,6 +1,6 @@
 package StringConcat
 
-// Function Concat Operator
+// String Concat Operator
 func ConcatOperator(original *string, concat string) {
 	// This could be written as 'return *original + concat'
 	// but I wanted to confirm no special compiler optimizations
@@ -8,7 +8,7 @@ func ConcatOperator(original *string, concat string) {
 	*original = *original + concat
 }
 
-// Function Self Concat Operator
+// String Self Concat Operator
 func SelfConcatOperator(input string, n int) string {
 	output := ""
 	for i := 0; i < n; i++ {
