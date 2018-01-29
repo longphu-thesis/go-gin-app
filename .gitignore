@@ -3,3 +3,4 @@ tools/
 vendor/
 !vendor/vendor.json
 coverage.txt
+coverage.out

@@ -5,6 +5,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+// Tracking Time Run Function
 func TimeTrack(start time.Time, name string) {
 	elapsed := time.Since(start)
 	log.WithFields(log.Fields{
