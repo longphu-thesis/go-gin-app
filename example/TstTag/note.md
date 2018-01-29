@@ -1,0 +1,1 @@
+[Skip some tests with go test](https://stackoverflow.com/questions/24030059/skip-some-tests-with-go-test)

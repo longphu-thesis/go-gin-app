@@ -8,5 +8,5 @@ fixers:
 files:
     ignore: ['*/vendor/*']
 
-branches:
-    ignore: ['master']
+#branches:
+#    ignore: ['master']
