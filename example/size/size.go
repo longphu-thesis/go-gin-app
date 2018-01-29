@@ -1,4 +1,3 @@
-//https://blog.golang.org/cover
 package size
 
 func Size(a int) string {

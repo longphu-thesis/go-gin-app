@@ -1,4 +1,3 @@
-// https://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go
 package fib
 
 // Fib returns the nth number in the Fibonacci series.
