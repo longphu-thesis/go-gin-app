@@ -14,6 +14,12 @@ services:
   - mysql
   - mongodb
 
+test:
+  adapter: mysql2
+  database: golang_test
+  username: travis
+  encoding: utf8
+
 #addons:
 #  apt:
 #    sources:
