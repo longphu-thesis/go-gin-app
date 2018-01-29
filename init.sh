@@ -25,7 +25,7 @@ setup_go () {
     if [ ! -d "$GO_PACKAGE" ]; then
         mkdir "$GO_PACKAGE"
     else
-        echo "Please check $GOPACKAGE"
+        echo "Please check $GO_PACKAGE"
     fi
 
     rm "$NAME"
@@ -40,6 +40,9 @@ then
         . ./export.sh "$GO_VERSION"
         go version
         echo "Init Done"
+
+        bash ./bash/go_get_dependency.sh
+        bash ./bash/go_get_dependency_govendor.sh
     else
         echo "folder go exist please check and remove $GO_ROOT"
     fi

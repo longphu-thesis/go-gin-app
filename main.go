@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 	log "github.com/sirupsen/logrus"
-	"go-gin-app/utils"
+	"github.com/longphu-thesis/go-gin-app/utils"
 )
 
 func init() {

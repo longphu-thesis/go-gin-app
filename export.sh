@@ -4,6 +4,8 @@
 GO_VERSION="$1"
 GO_PACKAGE="$HOME/package_$GO_VERSION"
 BASENAME=$(basename $PWD)
+REPO="github.com/longphu-thesis"
+WORK_DIR="$GO_PACKAGE/src/$REPO"
 
 if [ "$GO_VERSION" != "" ];
 then
@@ -12,8 +14,8 @@ then
     export GOBIN="$GO_PACKAGE/bin"
     export PATH="$GOROOT/bin:$PATH:$GO_PACKAGE/bin"
 
-    mkdir "$GO_PACKAGE/src"
-    ln -s $PWD "$GO_PACKAGE/src/$BASENAME"
+    mkdir -p "$WORK_DIR"
+    ln -s $PWD "$WORK_DIR/$BASENAME"
 
     echo "========================================================="
     echo "GOROOT : $GOROOT"
@@ -21,10 +23,10 @@ then
     echo "GOBIN : $GOBIN"
     echo "PATH : $PATH"
     echo "========================================================="
-    ls -l "$GO_PACKAGE/src"
+    ls -l "$WORK_DIR/$BASENAME"
     echo "========================================================="
 
-    cd "$GO_PACKAGE/src/$BASENAME"
+    cd "$WORK_DIR/$BASENAME"
 else
     echo "run [. export.sh go19]"
 fi
