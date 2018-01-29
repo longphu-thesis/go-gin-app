@@ -36,7 +36,7 @@ script:
 after_success:
   - bash ./bash/goveralls.sh
   - bash <(curl -s https://codecov.io/bash)
-  - godacov -t $CODACY_TOKEN -r ./coverage.cov -c $TRAVIS_COMMIT
+  - godacov -t $CODACY_TOKEN -r ./coverage.out -c $TRAVIS_COMMIT
 
 branches:
   only:
