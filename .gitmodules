@@ -1,0 +1,6 @@
+[submodule "GraphAPIFacebook"]
+	path = GraphAPIFacebook
+	url = https://gitlab.com/lp-thesis/GraphAPIFacebook.git
+[submodule "GoBlog"]
+	path = GoBlog
+	url = https://gitlab.com/lp-thesis/GoBlog.git
