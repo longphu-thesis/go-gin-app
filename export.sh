@@ -10,7 +10,7 @@ WORK_DIR="$GO_PACKAGE/src/$REPO"
 if [ "$GO_VERSION" != "" ];
 then
     export GOROOT="$HOME/$GO_VERSION"
-    export GOPATH="$GO_PACKAGE:$GOPATH"
+    export GOPATH="$GO_PACKAGE"
     export GOBIN="$GO_PACKAGE/bin"
     export PATH="$GOROOT/bin:$PATH:$GO_PACKAGE/bin"
 
