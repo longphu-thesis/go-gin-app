@@ -10,6 +10,8 @@ func TestMain(t *testing.T) {
 }
 
 func TestMainFailConnectMySql(t *testing.T) {
-	os.Setenv("DB_PASS", "DB_PASS")
+	os.Setenv("DB_USER", "")
+	os.Setenv("DB_NAME", "")
+	os.Setenv("DB_HOST", "")
 	main()
 }

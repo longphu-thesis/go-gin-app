@@ -67,8 +67,11 @@ func main() {
 	val.Add("loc", "Asia/Jakarta")
 
 	dsn := fmt.Sprintf("%s?%s", connection, val.Encode())
-
 	dbConn, err := sql.Open(`mysql`, dsn)
+
+	log.Info(dsn)
+	log.Info(dbConn)
+	log.Info(err)
 	if err != nil {
 		log.Error(err)
 	} else {
