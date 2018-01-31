@@ -11,7 +11,7 @@ import (
 	"github.com/joho/godotenv"
 
 	"github.com/longphu-thesis/go-gin-app/utils"
-	"github.com/longphu-thesis/go-gin-app/MaHoa"
+	"github.com/longphu-thesis/go-gin-app/example"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -24,7 +24,7 @@ type config struct {
 	Duration     time.Duration `env:"DURATION"`
 }
 
-type configMySql struct {
+type configMySQL struct {
 	User string `env:"DB_USER" envDefault:"travis"`
 	Pass string `env:"DB_PASS" envDefault:""`
 	Host string `env:"DB_HOST" envDefault:"locahost"`
@@ -50,16 +50,16 @@ func main() {
 	cfg := config{}
 	err = env.Parse(&cfg)
 
-	cfgMySql := configMySql{}
-	err = env.Parse(&cfgMySql)
+	cfgMySQL := configMySQL{}
+	err = env.Parse(&cfgMySQL)
 
 	connection := fmt.Sprintf(
 		"%s:%s@tcp(%s:%s)/%s",
-		cfgMySql.User,
-		cfgMySql.Pass,
-		cfgMySql.Host,
-		cfgMySql.Port,
-		cfgMySql.Name,
+		cfgMySQL.User,
+		cfgMySQL.Pass,
+		cfgMySQL.Host,
+		cfgMySQL.Port,
+		cfgMySQL.Name,
 	)
 
 	val := url.Values{}
@@ -69,9 +69,6 @@ func main() {
 	dsn := fmt.Sprintf("%s?%s", connection, val.Encode())
 	dbConn, err := sql.Open(`mysql`, dsn)
 
-	log.Info(dsn)
-	log.Info(dbConn)
-	log.Info(err)
 	if err != nil {
 		log.Error(err)
 	} else {
@@ -79,11 +76,11 @@ func main() {
 	}
 	defer dbConn.Close()
 
-	// go vet ./...
-	str := "hello world!"
-	////fmt.Printf("%d\n", str)
-	////fmt.Printf("%s\n", &str)
-	fmt.Printf("%s\n", str)
+	//// go vet ./...
+	//str := "hello world!"
+	//////fmt.Printf("%d\n", str)
+	//////fmt.Printf("%s\n", &str)
+	//fmt.Printf("%s\n", str)
 
-	log.Info(MaHoa.GetMD5Hash("test"))
+	example.Run()
 }
