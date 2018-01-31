@@ -9,6 +9,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/longphu-thesis/go-gin-app/utils"
 
+	"github.com/longphu-thesis/go-gin-app/MaHoa"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -46,4 +48,6 @@ func main() {
 	////fmt.Printf("%d\n", str)
 	////fmt.Printf("%s\n", &str)
 	fmt.Printf("%s\n", str)
+
+	log.Info(MaHoa.GetMD5Hash("test"))
 }
