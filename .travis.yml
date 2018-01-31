@@ -59,14 +59,14 @@ script:
 #  - bash ./bash/formatted.sh
   - bash ./bash/test.sh
 #  - bash ./bash/check_code.sh
-  - bash ./bash/codecov.sh
+#  - bash ./bash/codecov.sh
   - bash ./bash/goverage.sh
 #  - bash ./bash/benchmark.sh
 
 after_success:
   - bash ./bash/goveralls.sh
+  - bash ./bash/godacov.sh
   - bash <(curl -s https://codecov.io/bash)
-  - godacov -t $CODACY_TOKEN -r ./coverage.out -c $TRAVIS_COMMIT
 
 branches:
   only:

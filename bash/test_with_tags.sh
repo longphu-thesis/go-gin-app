@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./bash/init_env.sh
+. ./bash/init_env.sh > /dev/null
 
       # all tag
 go test -v -tags all -race  $GO_FILES_IGNORE_VENDOR

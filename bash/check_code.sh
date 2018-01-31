@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./bash/init_env.sh
+. ./bash/init_env.sh > /dev/null
 
 go vet $GO_FILES_IGNORE_VENDOR                              # go vet is the official Go static analyzer
 megacheck $GO_FILES_IGNORE_VENDOR                           # "go vet on steroids" + linter

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./bash/init_env.sh
+. ./bash/init_env.sh > /dev/null
 
 # go test -v -race ./..
 
