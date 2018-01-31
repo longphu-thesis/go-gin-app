@@ -4,3 +4,6 @@
 [submodule "GoBlog"]
 	path = GoBlog
 	url = https://gitlab.com/lp-thesis/GoBlog.git
+[submodule "MaHoa"]
+	path = MaHoa
+	url = https://lp-thesis@gitlab.com/lp-thesis/MaHoa.git

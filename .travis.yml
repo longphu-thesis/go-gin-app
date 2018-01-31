@@ -9,6 +9,9 @@ go:
 
 install: true
 
+# git:
+#   submodules: false
+
 services:
   - redis-server
   - mysql
@@ -40,6 +43,7 @@ notifications:
   email: false
 
 before_script:
+  - echo -e "machine gitlab.com\n  login lp-thesis\n  password $CI_USER_PASSWORD" >> ~/.netrc
   - go env
   - bash ./bash/go_get_dependency.sh
   - bash ./bash/go_get_dependency_govendor.sh
