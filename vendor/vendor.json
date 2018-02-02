@@ -13,6 +13,12 @@
 			"revisionTime": "2017-12-13T10:02:19Z"
 		},
 		{
+			"checksumSHA1": "mrz/kicZiUaHxkyfvC/DyQcr8Do=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "db69d09d2c587e9b9677f991dfcab1fc24d9086e",
+			"revisionTime": "2018-01-21T16:36:22Z"
+		},
+		{
 			"checksumSHA1": "2UmMbNHc8FBr98mJFN1k8ISOIHk=",
 			"path": "github.com/garyburd/redigo/internal",
 			"revision": "d1ed5c67e5794de818ea85e6b522fda02623a484",
@@ -85,10 +91,34 @@
 			"revisionTime": "2017-11-07T05:05:31Z"
 		},
 		{
+			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "792786c7400a136282c1664665ae0a8db921c6c2",
+			"revisionTime": "2016-01-10T10:55:54Z"
+		},
+		{
 			"checksumSHA1": "ySaT8G3I3y4MmnoXOYAAX0rC+p8=",
 			"path": "github.com/sirupsen/logrus",
 			"revision": "d682213848ed68c0a260ca37d6dd5ace8423f5ba",
 			"revisionTime": "2017-12-05T20:32:29Z"
+		},
+		{
+			"checksumSHA1": "6thzskcj6XrMO5kW6GlRiuTDYjU=",
+			"path": "github.com/stretchr/objx",
+			"revision": "8a3f7159479fbc75b30357fbc48f380b7320f08e",
+			"revisionTime": "2018-01-29T17:20:03Z"
+		},
+		{
+			"checksumSHA1": "pbq5LYckA7/rqe03l9MtXDekmRg=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "12b6f73e6084dad08a7c6e575284b177ecafbc71",
+			"revisionTime": "2018-01-31T22:23:50Z"
+		},
+		{
+			"checksumSHA1": "GxKV+q3Z/H3VsIiZ/dG3u88rnbc=",
+			"path": "github.com/stretchr/testify/mock",
+			"revision": "12b6f73e6084dad08a7c6e575284b177ecafbc71",
+			"revisionTime": "2018-01-31T22:23:50Z"
 		},
 		{
 			"checksumSHA1": "s+pk+d9XCjBkyUdHOwdB39FHaPQ=",
@@ -119,6 +149,12 @@
 			"path": "google.golang.org/appengine/cloudsql",
 			"revision": "5bee14b453b4c71be47ec1781b0fa61c2ea182db",
 			"revisionTime": "2017-12-12T22:30:47Z"
+		},
+		{
+			"checksumSHA1": "WfiM+grLatLDuXKj1roCcRDod/4=",
+			"path": "gopkg.in/DATA-DOG/go-sqlmock.v1",
+			"revision": "d76b18b42f285b792bf985118980ce9eacea9d10",
+			"revisionTime": "2017-09-01T07:34:10Z"
 		},
 		{
 			"checksumSHA1": "P/k5ZGf0lEBgpKgkwy++F7K1PSg=",
