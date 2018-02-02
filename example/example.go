@@ -1,5 +1,9 @@
 package example
 
+import (
+	"github.com/longphu-thesis/go-gin-app/example/redis"
+)
+
 func Run() {
 	f := &Foo{
 		FirstName: "FirstName",
@@ -11,4 +15,5 @@ func Run() {
 
 	Sum(1,1)
 
+	redis.Connect()
 }

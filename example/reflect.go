@@ -1,8 +1,9 @@
 package example
 
 import (
-	"fmt"
-	"reflect"
+	//"fmt"
+	//"reflect"
+	//"fmt"
 )
 
 type Foo struct {
@@ -12,13 +13,13 @@ type Foo struct {
 }
 
 func (f *Foo) reflect() {
-	val := reflect.ValueOf(f).Elem()
-
-	for i := 0; i < val.NumField(); i++ {
-		valueField := val.Field(i)
-		typeField := val.Type().Field(i)
-		tag := typeField.Tag
-
-		fmt.Printf("Field Name: %s,\t Field Value: %v,\t Tag Value: %s\n", typeField.Name, valueField.Interface(), tag.Get("tag_name"))
-	}
+	//val := reflect.ValueOf(f).Elem()
+	//
+	//for i := 0; i < val.NumField(); i++ {
+	//	valueField := val.Field(i)
+	//	typeField := val.Type().Field(i)
+	//	tag := typeField.Tag
+	//
+	//	fmt.Printf("Field Name: %s,\t Field Value: %v,\t Tag Value: %s\n", typeField.Name, valueField.Interface(), tag.Get("tag_name"))
+	//}
 }

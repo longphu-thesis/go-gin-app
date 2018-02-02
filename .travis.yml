@@ -7,11 +7,6 @@ go:
   - 1.9
   - master
 
-install: true
-
-git:
-  submodules: false
-
 services:
   - redis-server
   - mysql
@@ -42,11 +37,19 @@ matrix:
 notifications:
   email: false
 
-before_script:
+before_install:
   - echo -e "machine gitlab.com\n  login lp-thesis\n  password $CI_USER_PASSWORD" >> ~/.netrc
-  - git submodule update --init --recursive
+  - cp .env.test .env
+
+install: true
+
+git:
+  submodules: true
+
+before_script:
   - go env
   - bash ./bash/go_get_dependency.sh
+  - bash ./bash/go_get_dependency_test.sh
   - bash ./bash/go_get_dependency_govendor.sh
   - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'

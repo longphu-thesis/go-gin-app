@@ -1,3 +1,4 @@
 - https://dave.cheney.net/2013/06/09/writing-table-driven-tests-in-go
 - https://blog.golang.org/cover
 - https://docs.travis-ci.com/user/database-setup/#SQLite3
+- https://github.com/bxcodec/go-clean-arch
