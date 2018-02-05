@@ -7,3 +7,4 @@
 [submodule "FacebookGraphAPI"]
 	path = FacebookGraphAPI
 	url = https://lp-thesis@gitlab.com/lp-thesis/FacebookGraphAPI.git
+	branch = golang
