@@ -37,14 +37,15 @@ matrix:
 notifications:
   email: false
 
+git:
+  submodules: false
+
 before_install:
   - echo -e "machine gitlab.com\n  login lp-thesis\n  password $CI_USER_PASSWORD" >> ~/.netrc
+  - git submodule update --init --recursive
   - cp .env.test .env
 
 install: true
-
-git:
-  submodules: true
 
 before_script:
   - go env
