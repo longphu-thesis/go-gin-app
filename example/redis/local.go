@@ -57,14 +57,14 @@ func Connect() {
 		log.Info(pong)
 	}
 
-	keys, err := redis.Strings(c.Do("KEYS", "*"))
-	if err != nil {
-		log.Error(err)
-	} else {
-		for _, key := range keys {
-			fmt.Println(key)
-		}
-	}
+	//keys, err := redis.Strings(c.Do("KEYS", "*"))
+	//if err != nil {
+	//	log.Error(err)
+	//} else {
+	//	for _, key := range keys {
+	//		fmt.Println(key)
+	//	}
+	//}
 
 	log.Info("Done")
 }

@@ -36,6 +36,7 @@ func init() {
 	logfmt := log.TextFormatter{}
 	logfmt.FullTimestamp = true
 	log.SetFormatter(&logfmt)
+	log.SetLevel(log.InfoLevel)
 
 	err := godotenv.Load(".env")
 	if err != nil {
