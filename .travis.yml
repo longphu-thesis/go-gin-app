@@ -61,10 +61,10 @@ before_script:
 
 script:
 #  - bash ./bash/formatted.sh
-  - bash ./bash/test.sh
+#  - bash ./bash/test.sh
 #  - bash ./bash/check_code.sh
 #  - bash ./bash/codecov.sh
-  - bash ./bash/goverage.sh
+#  - bash ./bash/goverage.sh
 #  - bash ./bash/benchmark.sh
 
 after_success:
